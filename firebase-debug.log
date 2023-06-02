@@ -1,0 +1,87 @@
+[debug] [2023-05-24T21:24:34.187Z] ----------------------------------------------------------------------
+[debug] [2023-05-24T21:24:34.189Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HARDIK MAIND\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-05-24T21:24:34.190Z] CLI Version:   12.2.0
+[debug] [2023-05-24T21:24:34.190Z] Platform:      win32
+[debug] [2023-05-24T21:24:34.190Z] Node Version:  v18.14.0
+[debug] [2023-05-24T21:24:34.191Z] Time:          Thu May 25 2023 02:54:34 GMT+0530 (India Standard Time)
+[debug] [2023-05-24T21:24:34.191Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-24T21:24:34.270Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-24T21:24:34.271Z] > authorizing via signed-in user (maindhardik@gmail.com)
+[debug] [2023-05-24T21:24:34.271Z] [iam] checking project hardik-f7ae0 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-24T21:24:34.273Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hardik-f7ae0:testIamPermissions [none]
+[debug] [2023-05-24T21:24:34.274Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hardik-f7ae0:testIamPermissions x-goog-quota-user=projects/hardik-f7ae0
+[debug] [2023-05-24T21:24:34.274Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hardik-f7ae0:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-24T21:24:36.132Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hardik-f7ae0:testIamPermissions 200
+[debug] [2023-05-24T21:24:36.132Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hardik-f7ae0:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-24T21:24:36.133Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hardik-f7ae0 [none]
+[debug] [2023-05-24T21:24:36.953Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hardik-f7ae0 200
+[debug] [2023-05-24T21:24:36.953Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hardik-f7ae0 {"projectId":"hardik-f7ae0","projectNumber":"315437121972","displayName":"Hardik","name":"projects/hardik-f7ae0","resources":{"hostingSite":"hardik-f7ae0"},"state":"ACTIVE","etag":"1_135d3db1-5258-427c-b468-e370a2f8d3bb"}
+[info] 
+[info] === Deploying to 'hardik-f7ae0'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-05-24T21:24:36.961Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hardik-f7ae0/versions [none]
+[debug] [2023-05-24T21:24:36.961Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hardik-f7ae0/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-05-24T21:24:38.528Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hardik-f7ae0/versions 200
+[debug] [2023-05-24T21:24:38.528Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hardik-f7ae0/versions {"name":"projects/315437121972/sites/hardik-f7ae0/versions/4be6ff0a141a593c","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[hardik-f7ae0]: beginning deploy... 
+[info] i  hosting[hardik-f7ae0]: found 13 files in build 
+[debug] [2023-05-24T21:24:38.539Z] [hosting] uploading with 200 concurrency
+[debug] [2023-05-24T21:24:38.540Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2023-05-24T21:24:38.658Z] [hosting] hash cache [YnVpbGQ] stored for 13 files
+[debug] [2023-05-24T21:24:38.658Z] [hosting][hash queue][FINAL] {"max":107,"min":9,"avg":19.53846153846154,"active":0,"complete":13,"success":13,"errored":0,"retried":0,"total":13,"elapsed":116}
+[debug] [2023-05-24T21:24:38.658Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/315437121972/sites/hardik-f7ae0/versions/4be6ff0a141a593c:populateFiles [none]
+[debug] [2023-05-24T21:24:38.659Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/315437121972/sites/hardik-f7ae0/versions/4be6ff0a141a593c:populateFiles {"files":{"/asset-manifest.json":"16ab34e0dcafa41303e6fcd1d12ea9f8e5548c86e8dcdc1615c5f067a79d31c2","/manifest.json":"5c997de1364b8be939319fa9209abd77f2caf7f8844999a9e2e9173f844e7840","/index.html":"46fbe99247b763cf0cc8beed908302d520f3194ae534a9177f1b5ca86e23e372","/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/static/css/main.56bd7a77.css":"914abf9128f03f8db5afc86b5beb09b17c48085e7c82a3d6e29667d07d81b998","/static/js/787.719ec76d.chunk.js":"5823784a8c161ad075d7904077693c5d4b20a92cfcbfa2a96484f051f6490efc","/static/css/main.56bd7a77.css.map":"cff77da93ff199ad4eb05e32b720826ff7cc6e80bba997e65b56500c696101c1","/static/js/main.cc466eb6.js.LICENSE.txt":"38423aead7c666c8648c7d6d75d6a983fa34b29af00dacde04d51b41625e8340","/static/js/787.719ec76d.chunk.js.map":"0f7c90f5b3be06c6bfa0b7d435a9ab08b45e7d83c242b555d41a60830d42f347","/favicon.ico":"7cb635542c2906cf3d39b461f3ede3de300d0edf060c994b6877da0386803aea","/logo192.png":"7cb635542c2906cf3d39b461f3ede3de300d0edf060c994b6877da0386803aea","/static/js/main.cc466eb6.js":"d6bdbb7617b694d7ca3bdf927a479eba31b523e6bc8439a47827c59ad067e602","/static/js/main.cc466eb6.js.map":"386541bc1e6d4e31b15b898e097bf76a9f968fe4d83d8d2503d3fe274d8cca97"}}
+[debug] [2023-05-24T21:24:39.826Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/315437121972/sites/hardik-f7ae0/versions/4be6ff0a141a593c:populateFiles 200
+[debug] [2023-05-24T21:24:39.826Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/315437121972/sites/hardik-f7ae0/versions/4be6ff0a141a593c:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/hardik-f7ae0/versions/4be6ff0a141a593c/files"}
+[debug] [2023-05-24T21:24:39.826Z] [hosting][populate queue][FINAL] {"max":1171,"min":1171,"avg":1171,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1171}
+[debug] [2023-05-24T21:24:39.827Z] [hosting] uploads queued: 0
+[debug] [2023-05-24T21:24:39.827Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1684963479827}
+[info] +  hosting[hardik-f7ae0]: file upload complete 
+[debug] [2023-05-24T21:24:39.828Z] [hosting] deploy completed after 1298ms
+[debug] [2023-05-24T21:24:39.830Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "hardik-f7ae0"
+    },
+    "version": "projects/315437121972/sites/hardik-f7ae0/versions/4be6ff0a141a593c"
+  }
+]
+[info] i  hosting[hardik-f7ae0]: finalizing version... 
+[debug] [2023-05-24T21:24:39.833Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hardik-f7ae0/versions/4be6ff0a141a593c updateMask=status%2Cconfig
+[debug] [2023-05-24T21:24:39.833Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hardik-f7ae0/versions/4be6ff0a141a593c {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2023-05-24T21:24:41.107Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hardik-f7ae0/versions/4be6ff0a141a593c 200
+[debug] [2023-05-24T21:24:41.107Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hardik-f7ae0/versions/4be6ff0a141a593c {"name":"projects/315437121972/sites/hardik-f7ae0/versions/4be6ff0a141a593c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-24T21:24:37.523507Z","createUser":{"email":"maindhardik@gmail.com"},"finalizeTime":"2023-05-24T21:24:40.294229Z","finalizeUser":{"email":"maindhardik@gmail.com"}}
+[debug] [2023-05-24T21:24:41.107Z] [hosting] finalized version for hardik-f7ae0:[object Object]
+[info] +  hosting[hardik-f7ae0]: version finalized 
+[info] i  hosting[hardik-f7ae0]: releasing new version... 
+[debug] [2023-05-24T21:24:41.108Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hardik-f7ae0/channels/live/releases versionName=projects%2F315437121972%2Fsites%2Fhardik-f7ae0%2Fversions%2F4be6ff0a141a593c
+[debug] [2023-05-24T21:24:41.108Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hardik-f7ae0/channels/live/releases {}
+[debug] [2023-05-24T21:24:42.389Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hardik-f7ae0/channels/live/releases 200
+[debug] [2023-05-24T21:24:42.390Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hardik-f7ae0/channels/live/releases {"name":"projects/315437121972/sites/hardik-f7ae0/channels/live/releases/1684963480914000","version":{"name":"projects/315437121972/sites/hardik-f7ae0/versions/4be6ff0a141a593c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-24T21:24:37.523507Z","createUser":{"email":"maindhardik@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxaM5mZpiD5b5_OcsuxhgB1JDLOl_d0jC-n4ImZUqg"},"finalizeTime":"2023-05-24T21:24:40.294229Z","finalizeUser":{"email":"maindhardik@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxaM5mZpiD5b5_OcsuxhgB1JDLOl_d0jC-n4ImZUqg"}},"type":"DEPLOY","releaseTime":"2023-05-24T21:24:40.914Z","releaseUser":{"email":"maindhardik@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxaM5mZpiD5b5_OcsuxhgB1JDLOl_d0jC-n4ImZUqg"}}
+[debug] [2023-05-24T21:24:42.390Z] [hosting] release: {"name":"projects/315437121972/sites/hardik-f7ae0/channels/live/releases/1684963480914000","version":{"name":"projects/315437121972/sites/hardik-f7ae0/versions/4be6ff0a141a593c","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-24T21:24:37.523507Z","createUser":{"email":"maindhardik@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxaM5mZpiD5b5_OcsuxhgB1JDLOl_d0jC-n4ImZUqg"},"finalizeTime":"2023-05-24T21:24:40.294229Z","finalizeUser":{"email":"maindhardik@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxaM5mZpiD5b5_OcsuxhgB1JDLOl_d0jC-n4ImZUqg"}},"type":"DEPLOY","releaseTime":"2023-05-24T21:24:40.914Z","releaseUser":{"email":"maindhardik@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxaM5mZpiD5b5_OcsuxhgB1JDLOl_d0jC-n4ImZUqg"}}
+[info] +  hosting[hardik-f7ae0]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/hardik-f7ae0/overview
+[info] Hosting URL: https://hardik-f7ae0.web.app
+[debug] [2023-05-24T21:24:52.692Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\HARDIK MAIND\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.
